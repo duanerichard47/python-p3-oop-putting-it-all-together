@@ -1,59 +1,25 @@
 #!/usr/bin/env python3
 
 class Shoe:
-    def __init__(self, brand, color, size, material, condition):
+    def __init__(self, brand, size=0):
         self.brand = brand
-        self.color = color
         self.size = size
-        self.material = material
-        self.condition = condition
+     
 
-
-    def get_page_count(self):
-        return self._page_count
+    def get_size(self):
+        return self._size
     
-    def set_page_count(self, page_count):
-        if type(page_count) != int:
-            print("page_count must be an integer")
+    def set_size(self, size):
+        if type(size) != int:
+            print("size must be an integer")
         else:
-         self._page_count = page_count
+         self._size = size
 
-    page_count = property(get_page_count, set_page_count)
+    size = property(get_size, set_size)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def cobble(self):
+        print("Your shoe is as good as new!")
+        self.condition = "New"
 
 
 
